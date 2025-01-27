@@ -1,0 +1,6 @@
+<div *ngFor="let user of userDetails">
+  <button (click)="onButtonClick(user.name)">
+    <img [src]="imagePath + user.avatar" [alt]="user.name" />
+    <span> {{ user.name }} </span>
+  </button>
+</div>
