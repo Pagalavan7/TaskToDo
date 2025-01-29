@@ -1,0 +1,52 @@
+<div
+  class="card d-flex justify-content-center align-items-center my-5 mx-auto w-75"
+>
+  <p class="m-2">Create Task</p>
+  <hr class="w-100 m-0" />
+  <div class="card-body w-75">
+    <form (ngSubmit)="onFormSubmit()" #formReference="ngForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Task Name</label>
+        <input
+          type="email"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Task 01"
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="3"
+          ngModel
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="assignedTo" class="form-label">Assinged To</label>
+        <input
+          class="form-control"
+          id="assignedTo"
+          name="assignedTo"
+          placeholder="example@domain.com"
+          ngModel
+        />
+      </div>
+      <div>
+        <button
+          title="click me to create task"
+          type="submit"
+          class="btn btn-primary d-block mx-auto"
+        >
+          Create Task
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <app-display-task [tasks]="tasks" />
+</div>

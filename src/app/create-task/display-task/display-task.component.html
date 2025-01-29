@@ -1,0 +1,14 @@
+<div class="card w-100 mb-3" *ngIf="tasks.length">
+  <p class="card-header text-center">List of Tasks</p>
+
+  <div>
+    <ul class="list-group list-group-flush text-center">
+      <li *ngFor="let task of tasks" class="list-group-item">
+        {{ task.title }} - {{ task.description }}
+        <br />
+        <hr />
+        Assigned To: {{ task.assignedTo }}
+      </li>
+    </ul>
+  </div>
+</div>

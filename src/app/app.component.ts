@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { UserComponent } from './user/user.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { DisplayTaskComponent } from './create-task/display-task/display-task.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent],
+  imports: [CreateTaskComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
